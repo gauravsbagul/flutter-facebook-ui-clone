@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_facebook_responsive_ui/data/data.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
+import '../data/data.dart';
+import '../models/models.dart';
 import '../widgets/widgets.dart';
 import '../config/palette.dart';
 
@@ -56,6 +57,15 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ),
+          SliverList(
+            delegate: SliverChildBuilderDelegate(
+              (context, index) {
+                final Post post = posts[index];
+                return PostConatiner(post: post);
+              },
+              childCount: posts.length,
+            ),
+          )
         ],
       ),
     );
