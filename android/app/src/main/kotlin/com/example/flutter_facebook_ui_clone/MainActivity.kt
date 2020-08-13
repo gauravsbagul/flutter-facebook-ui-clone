@@ -1,4 +1,4 @@
-package com.example.flutter_facebook_ui_clone
+package com.gauravsbagul.flutter_facebook_ui_clone
 
 import io.flutter.embedding.android.FlutterActivity
 
